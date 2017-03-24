@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Login page </title>
+
+
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<h1><u>MAILEW</u></h1>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        
+      </button>
+     
+       <a href="#65" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="test.html">Reg</a></li>
+            <li><a href="grid.html">login</a></li>
+            
+          </ul>	 
+    </div></nav>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    
+        
+      
+<form class="form-horizontal" role="form" onsubmit="return fn()">
+  <div class="form-group" id="sub_email">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-xs-6">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group" id="sub_pass">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-xs-6">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+    </div>
+   </div>
+    
+    
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default" onclick="fn()">Sign in</button>
+    </div>
+  </div>
+  </form>
+
+<script>
+var a="hey";
+function fn() {
+  if((document.getElementById("inputEmail3").value == "abc@gmail.com") && (document.getElementById("inputPassword3").value =="123456")) {
+      alert(a);
+  }
+  else {
+    document.getElementById("myAlert").style.display = "block";
+    document.getElementById("myAlert").className = "alert alert-danger";
+  }
+}
+</script>
+
+    <div class="alert alert-danger" id="myAlert" style="display: none;">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <strong>Error!</strong> A problem has been occurred while submitting your data.
+    </div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Forgot  Password
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Have you forgot your password</h4>
+      </div>
+      <div class="modal-body">
+        Answer the security question to reveal your password
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Security Question</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$('#myModal').modal({
+	show:false
+});
+
+$("#rForm").validate();
+</script>
+</div>
+</font>
+</form>
+</body>
+</html>
